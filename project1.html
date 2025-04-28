@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesigning the Dwarf Fortress Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    .case-study-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .case-study-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .process-section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+    }
+    
+    .process-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-color);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <a href="index.html" class="menu-item back-button">← BACK TO HOME</a>
+    
+    <div class="case-study-container">
+      <div class="case-study-header">
+        <h1>Redesigning the Dwarf Fortress Website</h1>
+        <p class="tagline">UX/UI redesign for the Dwarf Fortress Website</p>
+      </div>
+      
+      <img src="/df.png" alt="Mobile App Redesign Cover Image" class="case-study-image">
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Context & Problem
+        </h2>
+        <p>I chose this website because it's a little hard to tell what links I should be clicking, where I should go to download the game, and overall it's a lot of information to process at once.
+        </p>
+        
+        
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Efficiency
+        </h2>
+        
+        <p>All the information on where you want to go is easily accessible on the navigation menu at the top.
+          
+        </p>
+        <p>There are multiple download buttons, making it easier for users to navigate.</p>
+        
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon">👥</div>
+          Audience & Research
+        </h2>
+        <p>The primary audience includes health-conscious individuals aged 25-45 who want to track various health metrics but aren't necessarily tech-savvy.</p>
+        <p>I conducted user interviews with 8 current and 5 former users to understand pain points and expectations. Key findings included:</p>
+        <ul>
+          <li>Data visualization was confusing and required too many taps</li>
+          <li>Important features were buried in complex navigation</li>
+          <li>Users wanted more personalized insights based on their data</li>
+        </ul>
+        
+        <div class="image-grid">
+          <img src="/placeholder.svg?height=150&width=200" alt="User persona 1">
+          <img src="/placeholder.svg?height=150&width=200" alt="User persona 2">
+          <img src="/placeholder.svg?height=150&width=200" alt="User journey map">
+        </div>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon">✏️</div>
+          Design Iterations
+        </h2>
+        <p>I explored multiple design directions, focusing on simplifying the interface while making data more accessible and actionable.</p>
+        
+        <h3>Iteration 1: Dashboard Redesign</h3>
+        <p>The first iteration focused on reorganizing the dashboard to highlight key metrics and recent activities.</p>
+        <img src="/placeholder.svg?height=300&width=800" alt="Dashboard Iteration 1" class="case-study-image">
+        <p>User feedback: Better than original but still too cluttered. Users wanted more visual representation of data.</p>
+        
+        <h3>Iteration 2: Visual Data Approach</h3>
+        <p>The second iteration emphasized visual data representation with customizable widgets and a simplified navigation system.</p>
+        <img src="/placeholder.svg?height=300&width=800" alt="Dashboard Iteration 2" class="case-study-image">
+        <p>User feedback: Much improved visual clarity, but some users found the customization options overwhelming.</p>
+        
+        <h3>Iteration 3: Final Design</h3>
+        <p>The final design balanced visual data representation with intuitive navigation and progressive disclosure of advanced features.</p>
+        <img src="/placeholder.svg?height=300&width=800" alt="Final Dashboard Design" class="case-study-image">
+        <p>Key improvements:</p>
+        <ul>
+          <li>Simplified navigation with a tab bar for primary functions</li>
+          <li>Data visualization with clear trends and actionable insights</li>
+          <li>Personalized recommendations based on user data</li>
+          <li>Progressive disclosure of advanced features</li>
+        </ul>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon">🎮</div>
+          Conclusion & Learnings
+        </h2>
+        <p>The redesigned app was tested with 12 users, showing a 40% improvement in task completion rates and significantly higher satisfaction scores.</p>
+        <p>Key learnings:</p>
+        <ul>
+          <li>Visual data representation is crucial for health tracking apps</li>
+          <li>Progressive disclosure helps balance simplicity with feature richness</li>
+          <li>Personalized insights create more engagement than raw data</li>
+          <li>Consistent feedback loops with users throughout the design process leads to better outcomes</li>
+        </ul>
+        <p>This project reinforced the importance of user-centered design and iterative testing in creating effective digital health tools.</p>
+      </div>
+    </div>
+    
+    <a href="index.html" class="pixel-button back-button">← RETURN TO HOME</a>
+  </div>
+</body>
+</html>
