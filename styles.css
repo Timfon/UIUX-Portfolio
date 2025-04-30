@@ -69,14 +69,14 @@ a:hover {
   margin: 0 auto;
   padding: 1rem;
   border: 4px solid var(--border-color);
-  border-radius: 8px;
+  /*border-radius: 8px; */
   background-color: var(--bg-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
 }
 
-.game-container::before {
+/* .game-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -92,13 +92,34 @@ a:hover {
   );
   pointer-events: none;
   z-index: 1;
+} */
+.game-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at bottom right,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
+
 
 section {
   margin: 3rem 0;
   padding: 2rem;
   border: 4px solid var(--border-color);
-  border-radius: 8px;
+  /*border-radius: 8px;*/
   background-color: var(--card-bg);
   position: relative;
 }

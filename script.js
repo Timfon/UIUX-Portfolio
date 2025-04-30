@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Pixel cursor effect
-  const cursor = document.createElement("div")
-  cursor.classList.add("pixel-cursor")
-  document.body.appendChild(cursor)
+  // const cursor = document.createElement("div")
+  // cursor.classList.add("pixel-cursor")
+  // document.body.appendChild(cursor)
 
   document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.clientX + "px"
