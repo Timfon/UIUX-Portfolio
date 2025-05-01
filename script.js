@@ -1,15 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Pixel cursor effect
-  // const cursor = document.createElement("div")
-  // cursor.classList.add("pixel-cursor")
-  // document.body.appendChild(cursor)
-
   document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.clientX + "px"
     cursor.style.top = e.clientY + "px"
   })
 
-  // Animate stat bars on scroll
   const statBars = document.querySelectorAll(".stat-fill")
   const observer = new IntersectionObserver(
     (entries) => {
@@ -45,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Start button animation
   const startButton = document.querySelector(".start-button")
   if (startButton) {
     startButton.addEventListener("click", () => {
@@ -56,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Add pixel dust effect on hover for project cards
   const projectCards = document.querySelectorAll(".project-card")
 
   projectCards.forEach((card) => {
@@ -83,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.appendChild(pixel)
 
-      // Animate and remove
       setTimeout(() => {
         pixel.style.transform = `translateY(-${Math.random() * 50 + 20}px)`
         pixel.style.opacity = "0"
@@ -94,44 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }, i * 50)
     }
   }
-
   function getRandomColor() {
     const colors = ["var(--primary-color)", "var(--secondary-color)", "var(--accent-color)", "var(--success-color)"]
     return colors[Math.floor(Math.random() * colors.length)]
   }
-
-  // Add form submission handling
-  const contactForm = document.querySelector(".contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault()
-
-      // Simulate form submission
-      const submitButton = this.querySelector(".submit-button")
-      const originalText = submitButton.textContent
-
-      submitButton.textContent = "SENDING..."
-      submitButton.disabled = true
-
-      setTimeout(() => {
-        submitButton.textContent = "SENT!"
-        submitButton.style.backgroundColor = "var(--success-color)"
-
-        // Reset form
-        contactForm.reset()
-
-        // Reset button after delay
-        setTimeout(() => {
-          submitButton.textContent = originalText
-          submitButton.style.backgroundColor = ""
-          submitButton.disabled = false
-        }, 3000)
-      }, 1500)
-    })
-  }
 })
 
-// Add this to your CSS
 document.head.insertAdjacentHTML(
   "beforeend",
   `
@@ -147,14 +106,12 @@ document.head.insertAdjacentHTML(
       transform: translate(-50%, -50%);
       transition: transform 0.1s ease;
     }
-    
     .pixel-dust {
       position: absolute;
       border-radius: 0;
       pointer-events: none;
       transition: transform 1s ease, opacity 1s ease;
     }
-      
   </style>
 `,
 )

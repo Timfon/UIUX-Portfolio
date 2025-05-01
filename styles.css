@@ -68,31 +68,11 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-  border: 4px solid var(--border-color);
-  /*border-radius: 8px; */
   background-color: var(--bg-color);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
 }
 
-/* .game-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  pointer-events: none;
-  z-index: 1;
-} */
 .game-container::before {
   content: "";
   position: absolute;
@@ -100,16 +80,6 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at top left,
-    rgba(255, 255, 255, 0.03) 0%,
-    transparent 50%
-  ),
-  radial-gradient(
-    circle at bottom right,
-    rgba(255, 255, 255, 0.03) 0%,
-    transparent 50%
-  );
   pointer-events: none;
   z-index: 1;
 }
@@ -163,6 +133,12 @@ section {
   border: 4px solid var(--border-color);
   border-radius: 8px;
   background-color: var(--card-bg);
+
+  background:
+    /* black at 50% opacity */
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    /* then your gif */
+    url('celeste.gif') center/cover no-repeat;
 }
 
 .hero::after {
@@ -172,7 +148,6 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><rect width="1" height="1" fill="%23ffffff10"/></svg>');
   background-repeat: repeat;
   opacity: 0.1;
   z-index: -1;
@@ -187,13 +162,12 @@ section {
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
-  background-image: url("/placeholder.svg?height=150&width=150");
   background-size: cover;
   image-rendering: pixelated;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .tagline {
@@ -517,6 +491,18 @@ section {
   position: relative;
   transition: all 0.3s ease;
 }
+.menu-item.back-button {
+  position: fixed;
+
+  top: 0;
+  z-index: 100;                    
+  background-color: var(--card-bg);
+
+  border-radius: 5px;
+  padding: 1rem;                   
+  display: inline-block;           
+}
+
 
 .menu-item::before {
   content: ">";
@@ -556,10 +542,14 @@ section {
 }
 
 /* Projects Section */
+.projects-section {
+  border-radius: 8px;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
+  border-radius: 8px;
 }
 
 .project-card {
@@ -582,22 +572,6 @@ section {
   background-position: center;
   border-bottom: 4px solid var(--border-color);
   image-rendering: pixelated;
-}
-
-.project-1 {
-  background-image: url("/placeholder.svg?height=180&width=280");
-}
-
-.project-2 {
-  background-image: url("/placeholder.svg?height=180&width=280");
-}
-
-.project-3 {
-  background-image: url("/placeholder.svg?height=180&width=280");
-}
-
-.project-4 {
-  background-image: url("/placeholder.svg?height=180&width=280");
 }
 
 .project-info {
